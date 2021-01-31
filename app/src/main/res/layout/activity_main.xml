@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Последние" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Лучшие" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Горячие" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="420dp"
+        android:layout_height="420dp"
+        android:layout_below="@id/tab_layout"
+        android:layout_centerInParent="true"
+        android:id="@+id/container">
+        <ImageView
+            android:layout_margin="16dp"
+            android:id="@+id/GIFcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ImageView>
+        <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/empty"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:id="@+id/description"
+        android:layout_margin="16dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/container"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:id="@+id/restart"
+        android:visibility="invisible"
+        android:text="Перезагрузить"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:layout_below="@id/description"
+        android:layout_centerInParent="true">
+
+        <ImageButton
+            android:id="@+id/previous"
+            android:layout_width="145dp"
+            android:layout_height="62dp"
+            android:text="back"
+            android:background="@drawable/back"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_toLeftOf="@id/next"/>
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="145dp"
+            android:layout_height="62dp"
+            android:layout_below="@id/description"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/next"
+            android:text="next" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
