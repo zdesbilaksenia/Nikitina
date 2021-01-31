@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         gif = findViewById(R.id.GIFcontainer);
         description = findViewById(R.id.description);
         progressBar = findViewById(R.id.progress_bar);
+        restart = findViewById(R.id.restart);
         anim = AnimationUtils.loadAnimation(this, R.anim.scale);
 
         model = new ViewModelProvider(this).get(Logic.class);
@@ -177,7 +178,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadError(){
 
-        restart = findViewById(R.id.restart);
         restart.setVisibility(View.VISIBLE);
         next.setVisibility(View.INVISIBLE);
         previous.setVisibility(View.INVISIBLE);
